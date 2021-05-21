@@ -14,7 +14,7 @@ deploy:
   bucket_name: "elasticbeanstalk-eu-central-1-870263020613"
   bucket_path: "testReact"
   on: 
-    branch: master
+    branch: main
 
 access_key_id: $AwsApiSecret
 secret_access_key: $AwsApiKey
