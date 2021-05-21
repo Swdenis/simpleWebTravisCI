@@ -5,16 +5,16 @@ before_install:
   - docker build -t deniurchak/docker-react -f Dockerfile.dev .
 script:
   - docker run -e CI=true deniurchak/docker-react npm run test -- --coverage
-language: generic 
+language: generic
 deploy:
   provider: elasticbeanstalk
-  region: "eu-central-1"
-  app: "testReact"
-  env: "Testreact-env"
-  bucket_name: "elasticbeanstalk-eu-central-1-870263020613"
-  bucket_path: "testReact"
-  on: 
-    branch: master
+  region: 'eu-central-1'
+  app: 'testReact'
+  env: 'Testreact-env'
+  bucket_name: 'elasticbeanstalk-eu-central-1-870263020613'
+  bucket_path: 'testReact'
+  on:
+    branch: main
 
 access_key_id: $AwsApiSecret
 secret_access_key: $AwsApiKey``
